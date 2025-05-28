@@ -67,7 +67,7 @@ def privacy_policy():
     <html><body>
     <h2>Data Deletion Instructions</h2>
     <p>This chatbot does not store user data permanently.</p>
-    <p>If you would like your Messenger data removed, please email us at <strong>info@karitativ.hu</strong> with your Facebook username.</p>
+    <p>Adataid törlésével kapcsoaltban, kérlek írj erre az emailre: <strong>turizmus@krisnavolgy.hu</strong> with your Facebook username.</p>
     </body></html>
     """
 
