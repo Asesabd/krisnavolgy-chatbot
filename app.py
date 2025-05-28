@@ -61,6 +61,16 @@ def webhook():
 
     return response_text, 200
 
+@app.route("/privacy", methods=["GET"])
+def privacy_policy():
+    return """
+    <html><body>
+    <h2>Data Deletion Instructions</h2>
+    <p>This chatbot does not store user data permanently.</p>
+    <p>If you would like your Messenger data removed, please email us at <strong>info@karitativ.hu</strong> with your Facebook username.</p>
+    </body></html>
+    """
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5050))
     app.run(host="0.0.0.0", port=port)
