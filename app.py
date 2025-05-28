@@ -29,7 +29,19 @@ def webhook_verification():
         return request.args.get("hub.challenge")
     return "Invalid verification token"
 
-@app.route("/", methods=["POST"])
+@app.route("/webhook", methods=["GET"])
+def webhook_verification():
+    if request.args.get("hub.verify_token") == VERIFY_TOKEN:
+        return request.args.get("hub.challenge")
+    return "Invalid verification token", 403
+
+@app.route("/webhook", methods=["GET"])
+def webhook_verification():
+    if request.args.get("hub.verify_token") == VERIFY_TOKEN:
+        return request.args.get("hub.challenge")
+    return "Invalid verification token", 403
+
+@app.route("/webhook", methods=["POST"])
 def webhook():
     data = request.get_json()
     print("Üzenet jött:", data)
