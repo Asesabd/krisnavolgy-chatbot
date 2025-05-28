@@ -23,23 +23,12 @@ def send_message(recipient_id, message_text):
     response = requests.post(url, params=params, headers=headers, json=data)
     print("Válasz elküldve:", response.status_code, response.text)
 
-@app.route("/", methods=["GET"])
-def webhook_verification():
-    if request.args.get("hub.verify_token") == VERIFY_TOKEN:
-        return request.args.get("hub.challenge")
-    return "Invalid verification token"
-
 @app.route("/webhook", methods=["GET"])
 def webhook_verification():
     if request.args.get("hub.verify_token") == VERIFY_TOKEN:
         return request.args.get("hub.challenge")
     return "Invalid verification token", 403
 
-@app.route("/webhook", methods=["GET"])
-def webhook_verification():
-    if request.args.get("hub.verify_token") == VERIFY_TOKEN:
-        return request.args.get("hub.challenge")
-    return "Invalid verification token", 403
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
