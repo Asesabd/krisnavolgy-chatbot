@@ -1,7 +1,11 @@
+
 from flask import Flask, request
 import requests
 import os
 from chatbot import valaszolo_bot
+from log import logol  # ÚJ sor – betöltjük a naplózást
+
+
 
 app = Flask(__name__)
 
@@ -47,6 +51,7 @@ def webhook():
                     print("Sender ID:", sender_id)
 
                     if message_text:
+                        logol(sender_id, message_text)  # <<< EZT IDE TEDD
                         valasz = valaszolo_bot(message_text)
                         print("Bot válasz:", valasz)
 
