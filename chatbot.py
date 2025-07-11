@@ -36,7 +36,7 @@ def valaszolo_bot(uzenet):
 
     elif u in ["4", "4.", "étel", "vásár"]:
         return (
-            "🍲 Csak húsmentes, vegán és ahimsza ételek!\n"
+            "🍲 Ízletes húsmentes, vegán és ahimsza ételek!\n"
             "🛍 A vásárban kézműves portékák, édességek, ajándéktárgyak is kaphatók."
         )
 
