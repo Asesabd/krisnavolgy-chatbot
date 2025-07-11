@@ -3,9 +3,7 @@ from flask import Flask, request
 import requests
 import os
 from chatbot import valaszolo_bot
-from log import logol  # ÚJ sor – betöltjük a naplózást
-
-
+from log import logol  # ← EZT IDE
 
 app = Flask(__name__)
 
@@ -77,5 +75,4 @@ def privacy_policy():
     """
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5050))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=5050)
