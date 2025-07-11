@@ -1,11 +1,16 @@
 from chatbot import valaszolo_bot
+from log import logol
+from datetime import datetime
 
-print("Szia! Miben segíthetek Krisna-völggyel kapcsolatban? (Kilépés: kilépés)")
+print("🧘‍♂️ Krisna-völgy teszt chatbot (Kilépés: kilépés)")
 
 while True:
-    uzenet = input("Te: ")
+    uzenet = input("Te: ").strip()
     if uzenet.lower() in ["kilépés", "exit", "quit"]:
         print("Bot: Viszlát!")
         break
+
+    sender_id = "lokalteszt"
+    logol(sender_id, uzenet)
     valasz = valaszolo_bot(uzenet)
     print("Bot:", valasz)
