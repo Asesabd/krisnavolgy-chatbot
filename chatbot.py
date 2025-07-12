@@ -11,6 +11,7 @@ def valaszolo_bot(uzenet):
         "csalad": ["5", "5.", "gyerek", "gyermek", "család", "pelenkázó"],
         "eso": ["6", "6.", "eső", "időjárás", "zivatar", "esik"],
         "egyeb": ["7", "7.", "egyéb", "más", "infó", "információ"],
+        "bucsuapp": ["8", "8.", "app", "térkép", "búcsú app", "interaktív"],
         "koszonet": ["köszi", "köszönöm", "szuper", "ez az", "de jó", "király", "zseniális"],
         "kilepes": ["kilépés", "exit", "quit"],
     }
@@ -19,6 +20,7 @@ def valaszolo_bot(uzenet):
     valaszok = {
         "udvozles": (
             "🙏 Hare Krisna! Itt a Krisna-völgy csetbot. Szolgálatodra – miben segíthetek?\n\n"
+            "📅 A Krisna-völgyi 3 napos Búcsú július 25–27. között kerül megrendezésre!\n\n"
             "📋 Írd be a számod, ami érdekel:\n"
             "1️⃣ Búcsú jegyek\n"
             "2️⃣ Program lehetőségek\n"
@@ -26,11 +28,14 @@ def valaszolo_bot(uzenet):
             "4️⃣ Étkezés és vásár\n"
             "5️⃣ Családi tudnivalók\n"
             "6️⃣ Időjárás / eső esetén\n"
-            "7️⃣ Egyéb"
+            "7️⃣ Egyéb\n"
+            "8️⃣ Búcsú App - interaktív térkép"
         ),
         "jegy": (
             "🎟️ Van, természetesen. Itt tudsz online venni, vagy a helyszínen a Búcsú alatt:\n"
-            "👉 https://krisnavolgy.hu/bucsujegy"
+            "👉 https://krisnavolgy.hu/bucsujegy\n\n"
+            "🎉 Idén vagy éppen 30 éves? Vendégünk vagy! Ünnepeljük együtt, hiszen mi is 30 évesek vagyunk!\n"
+            "📄 Látogatásod érvényes személyi okmánnyal ingyenes."
         ),
         "program": (
             "🎡 Várnak rád színpadi műsorok, vezetett túrák, kézműves vásár, gyermekprogramok,\n"
@@ -54,6 +59,10 @@ def valaszolo_bot(uzenet):
         "egyeb": (
             "ℹ️ Kérdezz bátran más témában is, vagy böngészd a részleteket itt:\n"
             "👉 https://krisnavolgy.hu/bucsu"
+        ),
+        "bucsuapp": (
+            "🗺️ A Búcsú App egy interaktív térkép, ahol megnézheted a programokat, helyszíneket, és segít eligazodni a rendezvényen.\n"
+            "👉 https://bucsuapp.krisnavolgy.hu"
         ),
         "koszonet": (
             "😊 Örülök, ha segíthettem!\n"

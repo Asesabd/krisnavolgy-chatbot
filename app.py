@@ -59,6 +59,7 @@ def webhook():
                         else:
                             send_message(sender_id, valasz)
 
+
     except Exception as e:
         print("Hiba:", e)
 
